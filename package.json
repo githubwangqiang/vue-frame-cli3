@@ -12,6 +12,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "lib-flexible": "^0.3.2",
+    "mobile-detect": "^1.4.3",
+    "nprogress": "^0.2.0",
     "postcss-px2rem": "^0.3.0",
     "vant": "^1.6.2",
     "vue": "^2.5.21",

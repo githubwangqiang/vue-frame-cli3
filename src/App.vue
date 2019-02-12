@@ -8,6 +8,36 @@
   </div>
 </template>
 
+<script>
+  import { mapMutations } from 'vuex'
+  import MobileDetect from 'mobile-detect'
+  const mobileDetect = new MobileDetect(window.navigator.userAgent)
+
+  export default {
+    name: 'app',
+    data () {
+      return {
+        platform: 'mobile'
+      }
+    },
+    computed: {
+    },
+    created () {
+      if (mobileDetect.mobile()) {
+        this.platform = 'mobile';
+      } else {
+        this.platform = 'pc';
+      }
+      this.init(this.platform)
+    },
+    methods: {
+      ...mapMutations('commen', {
+        init: 'INIT_PLATFORM'
+      })
+    }
+  }
+</script>
+
 <style lang="less">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

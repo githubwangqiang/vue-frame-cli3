@@ -4,10 +4,14 @@
 // import Vue from 'vue'
 
 const state = {
-  name: 'wangqiang'
+  name: 'wangqiang',
+  platform: 'mobile' // 判断是移动端还是pc端
 }
 
 const mutations = {
+  INIT_PLATFORM: (state, platform) => {
+     state.platform = platform
+  }
 }
 
 const actions = {

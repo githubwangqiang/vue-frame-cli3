@@ -16,21 +16,22 @@ export default {
   },
   computed: {
     ...mapState({
-      name: state => state.commen.name
+      name: state => state.commen.name,
+      platform: state => state.commen.platform
     })
   },
-  mounted () {
+  async mounted () {
+    console.log(this.platform)
     console.log(this.name)
     console.log(process.env.NODE_ENV)
     console.log(process.env.VUE_APP_CURRENTMODE)
     console.log(process.env)
     // this.$loading('开始')
-    this.$api.test.douban({
-      start: 25,
-      count: 25
-    }).then((res) => {
-      console.log(res)
-    })
+    // const res = await this.$api.test.douban({
+    //   start: 25,
+    //   count: 25
+    // })
+    // console.log(res)
   }
 }
 </script>

@@ -11,7 +11,7 @@ import qs from 'qs'; // 根据需求是否导入qs模块
 
 const test = {
   douban (params) {
-    return axios.get(`${base.api}/v2/movie/top25`, {
+    return axios.get(`${base.api}/v2/movie/top250`, {
       params: params
     })
   },
